@@ -614,7 +614,7 @@ def publish_discovery(dev, sub=''):
         if logtxt != "" and config.get('Log', 'show_mqtt_publish') == 'True':
             logging.info(logtxt)
     elif dev == 'elevator':
-        topic = 'homeassistant/elevator/kocom_wallpad_elevator/config'
+        topic = 'homeassistant/switch/kocom_wallpad_elevator/config'
         payload = {
             'name': 'Kocom Wallpad Elevator',
             'cmd_t': "kocom/myhome/elevator/command",
@@ -677,7 +677,7 @@ def publish_discovery(dev, sub=''):
             'curr_temp_tpl': '{{ value_json.cur_temp }}',
             'modes': ['off', 'heat'],
             'min_temp': 20,
-            'max_temp': 25,
+            'max_temp': 27,
             'ret': 'false',
             'qos': 0,
             'uniq_id': '{}_{}_{}{}'.format('kocom', 'wallpad', dev, num),
